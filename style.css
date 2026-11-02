@@ -1,0 +1,427 @@
+/* ---------- General ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: #e85d04;
+    color: white;
+
+    padding: 18px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------- Sections ---------- */
+
+section {
+    padding: 45px 30px;
+    text-align: center;
+}
+
+section h1,
+section h2 {
+    color: #d94801;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    background-color: #ffd6a5;
+    padding: 80px 30px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #333;
+}
+
+
+/* ---------- Buttons ---------- */
+
+.button,
+button {
+    background-color: #e85d04;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 11px 20px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    margin-top: 10px;
+}
+
+.button:hover,
+button:hover {
+    background-color: #c94700;
+}
+
+
+/* ---------- Search ---------- */
+
+.search-section input {
+    width: 300px;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+
+/* ---------- Recipe Container ---------- */
+
+.recipe-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ---------- Recipe Card ---------- */
+
+.recipe-card {
+    background-color: white;
+
+    width: 260px;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px #ccc;
+
+    transition: 0.2s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card h3 {
+    color: #d94801;
+}
+
+.food {
+    font-size: 60px;
+}
+
+/* Recipe Instructions */
+
+#modalInstructions {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+#modalInstructions ol {
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+#modalInstructions li {
+    margin-bottom: 12px;
+}
+
+/* Ingredients */
+
+#modalIngredients ul {
+    padding-left: 25px;
+}
+
+#modalIngredients li {
+    margin-bottom: 8px;
+}+
+
+/* ---------- Filter Buttons ---------- */
+
+.filter-buttons {
+    text-align: center;
+
+    padding: 10px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+}
+
+
+/* ---------- Categories ---------- */
+
+.categories {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.category-card {
+    background-color: white;
+
+    width: 260px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px #ccc;
+}
+
+.category-card h3 {
+    color: #d94801;
+}
+
+.category-icon {
+    font-size: 55px;
+}
+
+
+/* ---------- Features ---------- */
+
+.features {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.features div {
+    background-color: white;
+
+    width: 250px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px #ccc;
+}
+
+
+/* ---------- About ---------- */
+
+.about-section {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+/* ---------- Contact ---------- */
+
+.contact-form {
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px #ccc;
+
+    text-align: left;
+}
+
+.contact-form h2 {
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 5px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 130px;
+
+    resize: vertical;
+}
+
+.contact-form button {
+    display: block;
+
+    margin: 20px auto 0;
+}
+
+#formMessage {
+    text-align: center;
+
+    font-weight: bold;
+}
+
+
+/* ---------- Recipe Popup ---------- */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    z-index: 10;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: white;
+
+    width: 80%;
+    max-width: 600px;
+
+    margin: 8% auto;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.close {
+    position: absolute;
+
+    right: 20px;
+    top: 10px;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.modal-food {
+    font-size: 70px;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .search-section input {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+}

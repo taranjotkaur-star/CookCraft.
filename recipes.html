@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookCraft - Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">🍳 CookCraft</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipes</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+
+<!-- Introduction -->
+<section class="recipe-intro">
+    <h1>Our Recipes</h1>
+    <p>Explore delicious recipes from different categories.</p>
+</section>
+
+
+<!-- Search -->
+<section class="search-section">
+    <input
+        type="text"
+        id="recipeSearch"
+        placeholder="Search recipes..."
+        onkeyup="searchRecipes()">
+</section>
+
+
+<!-- Category Filter -->
+<div class="filter-buttons">
+
+    <button onclick="filterRecipes('all')">All</button>
+
+    <button onclick="filterRecipes('breakfast')">
+        Breakfast
+    </button>
+
+    <button onclick="filterRecipes('lunch')">
+        Lunch
+    </button>
+
+    <button onclick="filterRecipes('dinner')">
+        Dinner
+    </button>
+
+    <button onclick="filterRecipes('dessert')">
+        Desserts
+    </button>
+
+    <button onclick="filterRecipes('drinks')">
+        Drinks
+    </button>
+
+</div>
+
+
+<!-- All Recipes -->
+<section>
+
+    <div class="recipe-container">
+
+
+        <!-- 1. Pancakes -->
+        <div class="recipe-card recipe-item" data-category="breakfast">
+            <div class="food">🥞</div>
+            <h3>Pancakes</h3>
+            <p>Soft and fluffy pancakes for breakfast.</p>
+
+            <button onclick="showRecipe(
+                'Pancakes',
+                '🥞',
+                'Flour, milk, eggs and sugar',
+                `<ol>
+                    <li>Take flour, sugar, milk and eggs in a bowl.</li>
+                    <li>Mix all the ingredients to make a smooth batter.</li>
+                    <li>Heat a pan on medium heat.</li>
+                    <li>Pour a small amount of batter onto the pan.</li>
+                    <li>Cook until bubbles appear on the surface.</li>
+                    <li>Flip the pancake and cook the other side.</li>
+                    <li>Serve hot with your favourite topping.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 2. Omelette -->
+        <div class="recipe-card recipe-item" data-category="breakfast">
+            <div class="food">🍳</div>
+            <h3>Omelette</h3>
+            <p>A quick and simple egg breakfast.</p>
+
+            <button onclick="showRecipe(
+                'Omelette',
+                '🍳',
+                'Eggs, onion, tomato and spices',
+                `<ol>
+                    <li>Break the eggs into a bowl.</li>
+                    <li>Add chopped onion, tomato, salt and spices.</li>
+                    <li>Beat the mixture well.</li>
+                    <li>Heat a pan and add a little oil.</li>
+                    <li>Pour the egg mixture into the pan.</li>
+                    <li>Cook until the bottom becomes firm.</li>
+                    <li>Flip carefully and cook the other side.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 3. Cheese Pizza -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍕</div>
+            <h3>Cheese Pizza</h3>
+            <p>Delicious cheesy pizza with vegetables.</p>
+
+            <button onclick="showRecipe(
+                'Cheese Pizza',
+                '🍕',
+                'Pizza base, sauce, cheese, onion and capsicum',
+                `<ol>
+                    <li>Place the pizza base on a clean surface.</li>
+                    <li>Spread pizza sauce evenly over the base.</li>
+                    <li>Add chopped onion and capsicum.</li>
+                    <li>Spread grated cheese over the toppings.</li>
+                    <li>Place the pizza in a preheated oven.</li>
+                    <li>Bake until the cheese melts and the base becomes crisp.</li>
+                    <li>Remove carefully and cut into slices.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 4. White Sauce Pasta -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍝</div>
+            <h3>White Sauce Pasta</h3>
+            <p>Creamy and delicious pasta.</p>
+
+            <button onclick="showRecipe(
+                'White Sauce Pasta',
+                '🍝',
+                'Pasta, milk, butter, flour and vegetables',
+                `<ol>
+                    <li>Boil water and cook the pasta until soft.</li>
+                    <li>Drain the pasta and keep it aside.</li>
+                    <li>Heat butter in a pan.</li>
+                    <li>Add flour and stir well.</li>
+                    <li>Slowly add milk while continuously stirring.</li>
+                    <li>Cook until the sauce becomes creamy.</li>
+                    <li>Add vegetables, salt and seasoning.</li>
+                    <li>Add the cooked pasta and mix well.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 5. Vegetable Soup -->
+        <div class="recipe-card recipe-item" data-category="dinner">
+            <div class="food">🍲</div>
+            <h3>Vegetable Soup</h3>
+            <p>Warm and healthy vegetable soup.</p>
+
+            <button onclick="showRecipe(
+                'Vegetable Soup',
+                '🍲',
+                'Mixed vegetables, water and spices',
+                `<ol>
+                    <li>Wash and chop the vegetables.</li>
+                    <li>Heat a pan and add a little oil.</li>
+                    <li>Add the vegetables and cook for a few minutes.</li>
+                    <li>Add water and mix well.</li>
+                    <li>Add salt and other spices.</li>
+                    <li>Cover and cook until the vegetables become soft.</li>
+                    <li>Check the seasoning.</li>
+                    <li>Serve the soup hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 6. Fresh Salad -->
+        <div class="recipe-card recipe-item" data-category="dinner">
+            <div class="food">🥗</div>
+            <h3>Fresh Salad</h3>
+            <p>Fresh and healthy salad.</p>
+
+            <button onclick="showRecipe(
+                'Fresh Salad',
+                '🥗',
+                'Cucumber, tomato, onion and lemon',
+                `<ol>
+                    <li>Wash all the vegetables properly.</li>
+                    <li>Cut cucumber and tomato into small pieces.</li>
+                    <li>Slice the onion.</li>
+                    <li>Put all vegetables into a bowl.</li>
+                    <li>Add fresh lemon juice.</li>
+                    <li>Add a little salt.</li>
+                    <li>Mix everything well.</li>
+                    <li>Serve fresh.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 7. Chocolate Cake -->
+        <div class="recipe-card recipe-item" data-category="dessert">
+            <div class="food">🍰</div>
+            <h3>Chocolate Cake</h3>
+            <p>Soft and delicious chocolate cake.</p>
+
+            <button onclick="showRecipe(
+                'Chocolate Cake',
+                '🍰',
+                'Flour, cocoa powder, sugar, milk and eggs',
+                `<ol>
+                    <li>Preheat the oven.</li>
+                    <li>Take flour, cocoa powder and sugar in a bowl.</li>
+                    <li>Add eggs and milk.</li>
+                    <li>Mix everything until a smooth batter is formed.</li>
+                    <li>Pour the batter into a greased cake tin.</li>
+                    <li>Place the tin in the oven.</li>
+                    <li>Bake until the cake is fully cooked.</li>
+                    <li>Allow it to cool before serving.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 8. Cookies -->
+        <div class="recipe-card recipe-item" data-category="dessert">
+            <div class="food">🍪</div>
+            <h3>Cookies</h3>
+            <p>Crispy homemade cookies.</p>
+
+            <button onclick="showRecipe(
+                'Cookies',
+                '🍪',
+                'Flour, butter and sugar',
+                `<ol>
+                    <li>Take butter and sugar in a bowl.</li>
+                    <li>Mix them until smooth.</li>
+                    <li>Add flour and prepare a soft dough.</li>
+                    <li>Make small balls from the dough.</li>
+                    <li>Flatten them slightly.</li>
+                    <li>Place them on a baking tray.</li>
+                    <li>Bake until the cookies become golden.</li>
+                    <li>Allow them to cool before serving.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 9. Vegetable Biryani -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍚</div>
+            <h3>Vegetable Biryani</h3>
+            <p>Flavorful rice cooked with vegetables and spices.</p>
+
+            <button onclick="showRecipe(
+                'Vegetable Biryani',
+                '🍚',
+                'Rice, mixed vegetables, onion and spices',
+                `<ol>
+                    <li>Wash the rice and cook it until almost done.</li>
+                    <li>Drain the rice and keep it aside.</li>
+                    <li>Heat oil in a pan.</li>
+                    <li>Add onion and cook until lightly golden.</li>
+                    <li>Add mixed vegetables and spices.</li>
+                    <li>Cook the vegetables until slightly soft.</li>
+                    <li>Add the cooked rice.</li>
+                    <li>Mix gently without breaking the rice.</li>
+                    <li>Cover and cook for a few minutes.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 10. Veg Burger -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍔</div>
+            <h3>Veg Burger</h3>
+            <p>Tasty vegetable burger with fresh ingredients.</p>
+
+            <button onclick="showRecipe(
+                'Veg Burger',
+                '🍔',
+                'Burger bun, vegetable patty, lettuce, tomato and sauce',
+                `<ol>
+                    <li>Prepare or take a ready vegetable patty.</li>
+                    <li>Cook the patty on a pan until golden.</li>
+                    <li>Cut the burger bun into two halves.</li>
+                    <li>Toast the bun lightly.</li>
+                    <li>Apply sauce to the bun.</li>
+                    <li>Place lettuce and tomato on the bottom half.</li>
+                    <li>Place the vegetable patty on top.</li>
+                    <li>Add more sauce if desired.</li>
+                    <li>Cover with the top half of the bun.</li>
+                    <li>Serve fresh.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 11. French Fries -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍟</div>
+            <h3>French Fries</h3>
+            <p>Crispy and delicious potato fries.</p>
+
+            <button onclick="showRecipe(
+                'French Fries',
+                '🍟',
+                'Potatoes, oil and salt',
+                `<ol>
+                    <li>Wash and peel the potatoes.</li>
+                    <li>Cut them into thin strips.</li>
+                    <li>Wash the strips and remove excess starch.</li>
+                    <li>Dry them properly.</li>
+                    <li>Heat oil in a suitable pan.</li>
+                    <li>Cook the potato strips until crispy and golden.</li>
+                    <li>Remove them carefully and drain excess oil.</li>
+                    <li>Add salt and serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 12. Roti -->
+        <div class="recipe-card recipe-item" data-category="dinner">
+            <div class="food">🫓</div>
+            <h3>Roti</h3>
+            <p>Soft homemade Indian flatbread.</p>
+
+            <button onclick="showRecipe(
+                'Roti',
+                '🫓',
+                'Wheat flour, water and salt',
+                `<ol>
+                    <li>Take wheat flour in a bowl.</li>
+                    <li>Add water and a little salt.</li>
+                    <li>Knead the mixture into a soft dough.</li>
+                    <li>Rest the dough for a few minutes.</li>
+                    <li>Make small balls from the dough.</li>
+                    <li>Roll each ball into a thin circle.</li>
+                    <li>Heat a pan and place the roti on it.</li>
+                    <li>Cook both sides properly.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 13. Paneer Curry -->
+        <div class="recipe-card recipe-item" data-category="dinner">
+            <div class="food">🥘</div>
+            <h3>Paneer Curry</h3>
+            <p>Delicious paneer cooked in a flavorful gravy.</p>
+
+            <button onclick="showRecipe(
+                'Paneer Curry',
+                '🥘',
+                'Paneer, tomato, onion and spices',
+                `<ol>
+                    <li>Cut paneer into small pieces.</li>
+                    <li>Heat oil in a pan.</li>
+                    <li>Add chopped onion and cook until soft.</li>
+                    <li>Add tomato and cook until soft.</li>
+                    <li>Add spices and mix well.</li>
+                    <li>Cook until the gravy becomes smooth.</li>
+                    <li>Add paneer pieces.</li>
+                    <li>Add a little water and mix gently.</li>
+                    <li>Cover and cook for a few minutes.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 14. Gulab Jamun -->
+        <div class="recipe-card recipe-item" data-category="dessert">
+            <div class="food">🍩</div>
+            <h3>Gulab Jamun</h3>
+            <p>Soft and sweet traditional Indian dessert.</p>
+
+            <button onclick="showRecipe(
+                'Gulab Jamun',
+                '🍩',
+                'Milk powder, flour, sugar and cardamom',
+                `<ol>
+                    <li>Mix milk powder and flour in a bowl.</li>
+                    <li>Add a little water and make a soft dough.</li>
+                    <li>Make small smooth balls from the dough.</li>
+                    <li>Prepare sugar syrup using sugar and water.</li>
+                    <li>Add cardamom to the syrup.</li>
+                    <li>Cook the balls carefully until golden.</li>
+                    <li>Drain them and place them into the warm sugar syrup.</li>
+                    <li>Allow them to soak before serving.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 15. Fruit Salad -->
+        <div class="recipe-card recipe-item" data-category="breakfast">
+            <div class="food">🍓</div>
+            <h3>Fruit Salad</h3>
+            <p>Fresh and colourful fruit salad.</p>
+
+            <button onclick="showRecipe(
+                'Fruit Salad',
+                '🍓',
+                'Apple, banana, grapes, orange and other fresh fruits',
+                `<ol>
+                    <li>Wash all the fruits properly.</li>
+                    <li>Peel fruits that require peeling.</li>
+                    <li>Cut the fruits into small pieces.</li>
+                    <li>Put all the fruits into a large bowl.</li>
+                    <li>Mix them gently.</li>
+                    <li>Add fresh fruit juice if desired.</li>
+                    <li>Chill for a short time.</li>
+                    <li>Serve fresh.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 16. Fruit Smoothie -->
+        <div class="recipe-card recipe-item" data-category="breakfast">
+            <div class="food">🥤</div>
+            <h3>Fruit Smoothie</h3>
+            <p>Refreshing and easy homemade fruit smoothie.</p>
+
+            <button onclick="showRecipe(
+                'Fruit Smoothie',
+                '🥤',
+                'Banana, strawberry, milk and honey',
+                `<ol>
+                    <li>Wash the fruits properly.</li>
+                    <li>Peel and cut the banana.</li>
+                    <li>Put banana and strawberries into a blender.</li>
+                    <li>Add milk.</li>
+                    <li>Add a little honey.</li>
+                    <li>Blend until smooth.</li>
+                    <li>Pour into a glass.</li>
+                    <li>Serve fresh.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 17. Chole Bhature -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍛</div>
+            <h3>Chole Bhature</h3>
+            <p>Spicy chickpeas served with soft bhature.</p>
+
+            <button onclick="showRecipe(
+                'Chole Bhature',
+                '🍛',
+                'Chickpeas, flour, onion, tomato and spices',
+                `<ol>
+                    <li>Soak chickpeas in water for several hours.</li>
+                    <li>Cook the chickpeas until soft.</li>
+                    <li>Heat oil in a pan.</li>
+                    <li>Add onion and tomato.</li>
+                    <li>Add spices and cook the gravy.</li>
+                    <li>Add cooked chickpeas and mix well.</li>
+                    <li>For bhature, prepare a soft dough using flour and water.</li>
+                    <li>Roll the dough into small circles.</li>
+                    <li>Cook the bhature carefully until puffed.</li>
+                    <li>Serve bhature with hot chole.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 18. Rajma Rice -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍚</div>
+            <h3>Rajma Rice</h3>
+            <p>Comforting kidney beans served with rice.</p>
+
+            <button onclick="showRecipe(
+                'Rajma Rice',
+                '🍚',
+                'Rajma, rice, onion, tomato and spices',
+                `<ol>
+                    <li>Soak rajma in water for several hours.</li>
+                    <li>Cook the rajma until soft.</li>
+                    <li>Heat oil in a pan.</li>
+                    <li>Add chopped onion and cook until soft.</li>
+                    <li>Add tomato and spices.</li>
+                    <li>Cook until the gravy is ready.</li>
+                    <li>Add cooked rajma to the gravy.</li>
+                    <li>Mix well and cook for a few minutes.</li>
+                    <li>Prepare rice separately.</li>
+                    <li>Serve hot rajma with rice.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 19. Vegetable Fried Rice -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍚</div>
+            <h3>Vegetable Fried Rice</h3>
+            <p>Quick and tasty rice with fresh vegetables.</p>
+
+            <button onclick="showRecipe(
+                'Vegetable Fried Rice',
+                '🍚',
+                'Rice, carrot, capsicum, peas and soy sauce',
+                `<ol>
+                    <li>Cook the rice and allow it to cool.</li>
+                    <li>Chop carrot, capsicum and other vegetables.</li>
+                    <li>Heat oil in a pan.</li>
+                    <li>Add the vegetables and stir-fry them.</li>
+                    <li>Add the cooked rice.</li>
+                    <li>Add soy sauce and seasoning.</li>
+                    <li>Mix everything gently.</li>
+                    <li>Cook for a few minutes.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 20. Vegetable Noodles -->
+        <div class="recipe-card recipe-item" data-category="lunch">
+            <div class="food">🍜</div>
+            <h3>Vegetable Noodles</h3>
+            <p>Delicious noodles mixed with fresh vegetables.</p>
+
+            <button onclick="showRecipe(
+                'Vegetable Noodles',
+                '🍜',
+                'Noodles, vegetables, soy sauce and spices',
+                `<ol>
+                    <li>Boil water and cook the noodles.</li>
+                    <li>Drain the noodles and keep them aside.</li>
+                    <li>Chop the vegetables into thin pieces.</li>
+                    <li>Heat oil in a pan.</li>
+                    <li>Add the vegetables and stir-fry them.</li>
+                    <li>Add the cooked noodles.</li>
+                    <li>Add soy sauce and seasoning.</li>
+                    <li>Mix everything well.</li>
+                    <li>Cook for a few minutes.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 21. Dal Tadka -->
+        <div class="recipe-card recipe-item" data-category="dinner">
+            <div class="food">🥣</div>
+            <h3>Dal Tadka</h3>
+            <p>Simple and flavorful Indian lentil dish.</p>
+
+            <button onclick="showRecipe(
+                'Dal Tadka',
+                '🥣',
+                'Lentils, tomato, onion, garlic and spices',
+                `<ol>
+                    <li>Wash the lentils properly.</li>
+                    <li>Cook the lentils with water until soft.</li>
+                    <li>Heat oil or ghee in another pan.</li>
+                    <li>Add onion and garlic.</li>
+                    <li>Add tomato and spices.</li>
+                    <li>Cook the mixture until soft.</li>
+                    <li>Pour the tempering into the cooked dal.</li>
+                    <li>Mix well and cook for a few minutes.</li>
+                    <li>Serve hot with rice or roti.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 22. Aloo Paratha -->
+        <div class="recipe-card recipe-item" data-category="breakfast">
+            <div class="food">🫓</div>
+            <h3>Aloo Paratha</h3>
+            <p>Popular Indian flatbread stuffed with potato.</p>
+
+            <button onclick="showRecipe(
+                'Aloo Paratha',
+                '🫓',
+                'Wheat flour, potatoes, onion and spices',
+                `<ol>
+                    <li>Boil the potatoes and allow them to cool.</li>
+                    <li>Peel and mash the potatoes.</li>
+                    <li>Add onion and spices to the mashed potatoes.</li>
+                    <li>Prepare a soft dough using wheat flour.</li>
+                    <li>Take a small dough ball and flatten it.</li>
+                    <li>Place the potato filling inside.</li>
+                    <li>Close the dough and roll it carefully.</li>
+                    <li>Heat a pan and place the paratha on it.</li>
+                    <li>Cook both sides with a little oil or ghee.</li>
+                    <li>Serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 23. Idli -->
+        <div class="recipe-card recipe-item" data-category="breakfast">
+            <div class="food">🥞</div>
+            <h3>Idli</h3>
+            <p>Soft and healthy South Indian breakfast.</p>
+
+            <button onclick="showRecipe(
+                'Idli',
+                '🥞',
+                'Rice, urad dal and water',
+                `<ol>
+                    <li>Wash rice and urad dal separately.</li>
+                    <li>Soak them in water for several hours.</li>
+                    <li>Grind them into a smooth batter.</li>
+                    <li>Mix the batter properly.</li>
+                    <li>Allow the batter to ferment.</li>
+                    <li>Grease the idli moulds.</li>
+                    <li>Pour the batter into the moulds.</li>
+                    <li>Steam the idlis until they become soft.</li>
+                    <li>Remove carefully and serve hot.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 24. Mango Shake -->
+        <div class="recipe-card recipe-item" data-category="drinks">
+            <div class="food">🥭</div>
+            <h3>Mango Shake</h3>
+            <p>Refreshing and creamy mango drink.</p>
+
+            <button onclick="showRecipe(
+                'Mango Shake',
+                '🥭',
+                'Mango, milk and sugar',
+                `<ol>
+                    <li>Wash and peel the mango.</li>
+                    <li>Cut the mango into small pieces.</li>
+                    <li>Put the mango pieces into a blender.</li>
+                    <li>Add milk.</li>
+                    <li>Add sugar according to taste.</li>
+                    <li>Blend until smooth.</li>
+                    <li>Pour into a glass.</li>
+                    <li>Serve chilled.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 25. Lemonade -->
+        <div class="recipe-card recipe-item" data-category="drinks">
+            <div class="food">🍋</div>
+            <h3>Lemonade</h3>
+            <p>Fresh and refreshing lemon drink.</p>
+
+            <button onclick="showRecipe(
+                'Lemonade',
+                '🍋',
+                'Lemon, water, sugar and ice',
+                `<ol>
+                    <li>Wash the lemon properly.</li>
+                    <li>Cut the lemon and squeeze out the juice.</li>
+                    <li>Take water in a glass or jug.</li>
+                    <li>Add lemon juice.</li>
+                    <li>Add sugar and mix well.</li>
+                    <li>Add ice cubes.</li>
+                    <li>Mix everything together.</li>
+                    <li>Serve chilled.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+        <!-- 26. Vanilla Ice Cream -->
+        <div class="recipe-card recipe-item" data-category="dessert">
+            <div class="food">🍦</div>
+            <h3>Vanilla Ice Cream</h3>
+            <p>Simple and creamy vanilla dessert.</p>
+
+            <button onclick="showRecipe(
+                'Vanilla Ice Cream',
+                '🍦',
+                'Milk, cream, sugar and vanilla',
+                `<ol>
+                    <li>Take milk and cream in a bowl.</li>
+                    <li>Add sugar and vanilla.</li>
+                    <li>Mix everything until the sugar dissolves.</li>
+                    <li>Pour the mixture into a suitable container.</li>
+                    <li>Cover the container properly.</li>
+                    <li>Place it in the freezer.</li>
+                    <li>Freeze until the mixture becomes firm and creamy.</li>
+                    <li>Take it out and serve chilled.</li>
+                </ol>`
+            )">
+                View Recipe
+            </button>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Recipe Details Popup -->
+<div id="recipeModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeRecipe()">
+            &times;
+        </span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalFood" class="modal-food"></div>
+
+        <h3>Ingredients</h3>
+        <p id="modalIngredients"></p>
+
+        <h3>Step-by-Step Instructions</h3>
+        <div id="modalInstructions"></div>
+
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 CookCraft | Recipe & Cooking Platform</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
